@@ -136,8 +136,8 @@ The Button Lab has no package dependencies and can also be opened directly as a 
 
 Contributions are accepted through pull requests. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for scope and safety requirements. Security issues should follow [`SECURITY.md`](SECURITY.md) and must not be disclosed in a public pull request.
 
-## Before publishing publicly
+## License
 
-This repository is currently intended for private review. Before making it public, review the third-party license obligations and re-test installation and removal on a disposable Windows 11 machine or restore point. Project-authored code and assets are licensed under the [MIT License](LICENSE); downloaded dependencies retain their upstream licenses.
+Project-authored code and assets are licensed under the [MIT License](LICENSE); downloaded dependencies retain their upstream licenses.
 
 Nulea and M505 are used solely for hardware identification. This community project is not affiliated with or endorsed by Nulea.
