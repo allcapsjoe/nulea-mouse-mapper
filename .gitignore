@@ -1,0 +1,8 @@
+.cache/
+.runtime/
+button-lab/mapping-plan.json
+button-lab/.button-lab.pid
+*.log
+*.old
+.DS_Store
+Thumbs.db

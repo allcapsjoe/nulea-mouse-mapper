@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="360" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
+  <title id="title">Nulea Mouse Mapper</title>
+  <desc id="desc">Device-scoped Windows button remapping, shown with a stylized mouse and routed input signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1117"/>
+      <stop offset="0.5" stop-color="#111b22"/>
+      <stop offset="1" stop-color="#090d11"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#c9ff62"/>
+      <stop offset="1" stop-color="#62d8ff"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#62d8ff" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#62d8ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".045"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1400" height="360" rx="28" fill="url(#grid)"/>
+  <ellipse cx="1145" cy="170" rx="310" ry="260" fill="url(#halo)"/>
+  <path d="M0 292C286 251 435 340 694 298s413-112 706-58v120H0Z" fill="#c9ff62" fill-opacity=".025"/>
+
+  <g transform="translate(80 64)">
+    <rect width="44" height="8" rx="4" fill="url(#accent)"/>
+    <text x="0" y="56" fill="#f5f7f1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="760" letter-spacing="-2">NULEA MOUSE MAPPER</text>
+    <text x="1" y="94" fill="#9ca8ae" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" letter-spacing="2.2">DEVICE-SCOPED WINDOWS BUTTON REMAPPING</text>
+
+    <g transform="translate(0 154)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">
+      <g><rect width="146" height="34" rx="17" fill="#c9ff62" fill-opacity=".10" stroke="#c9ff62" stroke-opacity=".35"/><circle cx="18" cy="17" r="4" fill="#c9ff62"/><text x="31" y="21" fill="#dfffa1">DEVICE-SCOPED</text></g>
+      <g transform="translate(158)"><rect width="104" height="34" rx="17" fill="#62d8ff" fill-opacity=".09" stroke="#62d8ff" stroke-opacity=".3"/><circle cx="18" cy="17" r="4" fill="#62d8ff"/><text x="31" y="21" fill="#a8ebff">WINDOWS</text></g>
+      <g transform="translate(274)"><rect width="145" height="34" rx="17" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".14"/><circle cx="18" cy="17" r="4" fill="#b8c0c4"/><text x="31" y="21" fill="#cdd3d5">LOCAL-FIRST</text></g>
+    </g>
+  </g>
+
+  <g transform="translate(998 42)">
+    <circle cx="152" cy="138" r="126" fill="none" stroke="#62d8ff" stroke-opacity=".10"/>
+    <circle cx="152" cy="138" r="94" fill="none" stroke="#c9ff62" stroke-opacity=".08" stroke-dasharray="5 10"/>
+    <path d="M104 29c-51 12-79 57-79 116v48c0 69 49 115 127 115s127-46 127-115v-48c0-59-28-104-79-116-29-7-67-7-96 0Z" fill="#111b22" stroke="#d6e0e3" stroke-opacity=".48" stroke-width="2"/>
+    <path d="M152 25v102M29 131h246" fill="none" stroke="#d6e0e3" stroke-opacity=".26"/>
+    <rect x="140" y="61" width="24" height="59" rx="12" fill="#0b1116" stroke="#c9ff62" stroke-width="2"/>
+    <path d="M152 70v35" stroke="#c9ff62" stroke-width="3" stroke-linecap="round"/>
+    <rect x="13" y="148" width="28" height="42" rx="10" fill="#c9ff62" fill-opacity=".16" stroke="#c9ff62"/>
+    <rect x="11" y="196" width="28" height="42" rx="10" fill="#62d8ff" fill-opacity=".15" stroke="#62d8ff"/>
+    <circle cx="26" cy="169" r="4" fill="#c9ff62" filter="url(#glow)"/>
+    <circle cx="24" cy="217" r="4" fill="#62d8ff" filter="url(#glow)"/>
+    <path d="M-101 169h114M-101 217h112" fill="none" stroke="url(#accent)" stroke-width="2" stroke-dasharray="3 7"/>
+    <g fill="#0b1116" stroke="#fff" stroke-opacity=".16">
+      <rect x="-151" y="151" width="50" height="36" rx="10"/><rect x="-151" y="199" width="50" height="36" rx="10"/>
+    </g>
+    <text x="-126" y="174" text-anchor="middle" fill="#c9ff62" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700">B3</text>
+    <text x="-126" y="222" text-anchor="middle" fill="#62d8ff" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700">R</text>
+  </g>
+
+  <rect x="1" y="1" width="1398" height="358" rx="27" fill="none" stroke="#fff" stroke-opacity=".09"/>
+</svg>

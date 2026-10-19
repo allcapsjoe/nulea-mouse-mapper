@@ -1,0 +1,10 @@
+{
+  "name": "nulea-mouse-mapper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Device-scoped Windows button remapping for Nulea mice",
+  "scripts": {
+    "button-lab": "node button-lab/server.js",
+    "check": "node --check button-lab/server.js"
+  }
+}
