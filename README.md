@@ -6,6 +6,12 @@
   A local-first toolkit for identifying and remapping buttons on one physical Nulea mouse without changing other connected mice.
 </p>
 
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-c9ff62"></a>
+  <img alt="Platform: Windows" src="https://img.shields.io/badge/platform-Windows-62d8ff">
+  <img alt="Driver install: opt-in" src="https://img.shields.io/badge/driver%20install-opt--in-9ca8ae">
+</p>
+
 > [!CAUTION]
 > Device-specific blocking requires the unsigned Interception input-filter driver. Driver problems can temporarily disable mouse or keyboard input until Windows is restarted. Read the safety notes before installing it.
 
@@ -117,6 +123,8 @@ This project reduces the risk by:
 
 Exact archive URLs and SHA-256 values live in [`scripts/setup.ps1`](scripts/setup.ps1).
 
+See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for license provenance and the Interception project's separate commercial-licensing note.
+
 ## Development
 
 ```powershell
@@ -126,6 +134,10 @@ node --check button-lab/server.js
 
 The Button Lab has no package dependencies and can also be opened directly as a static HTML file, although saving its plan to disk requires the local Node server.
 
+Contributions are accepted through pull requests. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for scope and safety requirements. Security issues should follow [`SECURITY.md`](SECURITY.md) and must not be disclosed in a public pull request.
+
 ## Before publishing publicly
 
-This repository is currently intended for private review. Before making it public, choose a project license, review the third-party license obligations, and re-test installation and removal on a disposable Windows 11 machine or restore point.
+This repository is currently intended for private review. Before making it public, review the third-party license obligations and re-test installation and removal on a disposable Windows 11 machine or restore point. Project-authored code and assets are licensed under the [MIT License](LICENSE); downloaded dependencies retain their upstream licenses.
+
+Nulea and M505 are used solely for hardware identification. This community project is not affiliated with or endorsed by Nulea.
