@@ -15,6 +15,11 @@
       <stop stop-color="#62d8ff" stop-opacity=".24"/>
       <stop offset="1" stop-color="#62d8ff" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="trackball" cx="35%" cy="28%" r="72%">
+      <stop offset="0" stop-color="#e9ffb8"/>
+      <stop offset=".34" stop-color="#c9ff62"/>
+      <stop offset="1" stop-color="#55bba9"/>
+    </radialGradient>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".045"/>
     </pattern>
@@ -41,23 +46,44 @@
     </g>
   </g>
 
-  <g transform="translate(998 42)">
-    <circle cx="152" cy="138" r="126" fill="none" stroke="#62d8ff" stroke-opacity=".10"/>
-    <circle cx="152" cy="138" r="94" fill="none" stroke="#c9ff62" stroke-opacity=".08" stroke-dasharray="5 10"/>
-    <path d="M104 29c-51 12-79 57-79 116v48c0 69 49 115 127 115s127-46 127-115v-48c0-59-28-104-79-116-29-7-67-7-96 0Z" fill="#111b22" stroke="#d6e0e3" stroke-opacity=".48" stroke-width="2"/>
-    <path d="M152 25v102M29 131h246" fill="none" stroke="#d6e0e3" stroke-opacity=".26"/>
-    <rect x="140" y="61" width="24" height="59" rx="12" fill="#0b1116" stroke="#c9ff62" stroke-width="2"/>
-    <path d="M152 70v35" stroke="#c9ff62" stroke-width="3" stroke-linecap="round"/>
-    <rect x="13" y="148" width="28" height="42" rx="10" fill="#c9ff62" fill-opacity=".16" stroke="#c9ff62"/>
-    <rect x="11" y="196" width="28" height="42" rx="10" fill="#62d8ff" fill-opacity=".15" stroke="#62d8ff"/>
-    <circle cx="26" cy="169" r="4" fill="#c9ff62" filter="url(#glow)"/>
-    <circle cx="24" cy="217" r="4" fill="#62d8ff" filter="url(#glow)"/>
-    <path d="M-101 169h114M-101 217h112" fill="none" stroke="url(#accent)" stroke-width="2" stroke-dasharray="3 7"/>
-    <g fill="#0b1116" stroke="#fff" stroke-opacity=".16">
-      <rect x="-151" y="151" width="50" height="36" rx="10"/><rect x="-151" y="199" width="50" height="36" rx="10"/>
+  <g transform="translate(1028 8)">
+    <circle cx="136" cy="165" r="144" fill="none" stroke="#62d8ff" stroke-opacity=".09"/>
+    <circle cx="136" cy="165" r="108" fill="none" stroke="#c9ff62" stroke-opacity=".07" stroke-dasharray="5 10"/>
+
+    <!-- Original vector interpretation of the Nulea M505 reference silhouette. -->
+    <path d="M98 13C54 14 28 33 25 72c-2 25 9 42 1 70-10 35-8 58 10 80 13 16 31 28 43 49 10 18 9 47 16 68 7 22 26 30 50 24 46-11 78-41 91-83 17-55 15-122-8-179-19-46-62-89-130-88Z" fill="#101a21" stroke="#d6e0e3" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M145 19c27 12 52 34 69 64l-2 74c-1 15-8 27-17 34-13-7-19-21-18-39l3-97" fill="#0b1319" stroke="#d6e0e3" stroke-opacity=".28" stroke-width="1.4"/>
+    <path d="M232 113c12 42 14 92 3 136M91 268c6 22 5 47 10 66" fill="none" stroke="#d6e0e3" stroke-opacity=".16" stroke-linecap="round"/>
+
+    <!-- Prominent M505 thumb trackball. -->
+    <circle cx="96" cy="85" r="49" fill="#0a1117" stroke="#d6e0e3" stroke-opacity=".28" stroke-width="1.5"/>
+    <circle cx="96" cy="85" r="43" fill="none" stroke="#c9ff62" stroke-opacity=".35" stroke-width="2"/>
+    <circle cx="96" cy="85" r="37" fill="url(#trackball)" filter="url(#glow)"/>
+    <path d="M74 65c15-14 37-13 51-1M67 87c11 21 38 32 59 18M82 49c-14 10-22 24-23 40" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Side controls: two buttons framing the textured scroll wheel. -->
+    <g transform="translate(34 139) rotate(-18)">
+      <rect x="0" y="-18" width="25" height="34" rx="8" fill="#c9ff62" fill-opacity=".12" stroke="#c9ff62" stroke-opacity=".7"/>
+      <rect x="2" y="52" width="25" height="35" rx="8" fill="#62d8ff" fill-opacity=".11" stroke="#62d8ff" stroke-opacity=".62"/>
+      <rect x="9" y="14" width="17" height="43" rx="8" fill="#081016" stroke="#d6e0e3" stroke-opacity=".42"/>
+      <path d="M13 22h9m-9 6h9m-9 6h9m-9 6h9m-9 6h9" stroke="#9ca8ae" stroke-width="1.5" stroke-linecap="round"/>
     </g>
-    <text x="-126" y="174" text-anchor="middle" fill="#c9ff62" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700">B3</text>
-    <text x="-126" y="222" text-anchor="middle" fill="#62d8ff" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700">R</text>
+    <path d="M52 116c-9 9-16 24-18 41M35 190c4 14 12 27 25 39" fill="none" stroke="#d6e0e3" stroke-opacity=".22"/>
+
+    <text x="168" y="326" transform="rotate(-15 168 326)" fill="#d6e0e3" fill-opacity=".65" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1">M505</text>
+
+    <path d="M-99 130h124l14 5M-99 202h106l35-2" fill="none" stroke="url(#accent)" stroke-width="2" stroke-dasharray="3 7"/>
+    <g fill="#0b1116" stroke="#fff" stroke-opacity=".16">
+      <rect x="-171" y="112" width="72" height="36" rx="10"/><rect x="-171" y="184" width="72" height="36" rx="10"/>
+    </g>
+    <text x="-135" y="135" text-anchor="middle" fill="#c9ff62" font-family="ui-monospace,Consolas,monospace" font-size="12" font-weight="700">B3 → R</text>
+    <text x="-135" y="207" text-anchor="middle" fill="#62d8ff" font-family="ui-monospace,Consolas,monospace" font-size="12" font-weight="700">R  ×</text>
+  </g>
+
+  <g transform="translate(1348 38)" aria-label="Project information">
+    <circle r="19" fill="#fff" fill-opacity=".045" stroke="#fff" stroke-opacity=".22"/>
+    <circle r="13" fill="none" stroke="#62d8ff" stroke-opacity=".34"/>
+    <text x="0" y="6" text-anchor="middle" fill="#a8ebff" font-family="Georgia,serif" font-size="20" font-weight="700">i</text>
   </g>
 
   <rect x="1" y="1" width="1398" height="358" rx="27" fill="none" stroke="#fff" stroke-opacity=".09"/>

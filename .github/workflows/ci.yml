@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Prepare pinned runtime
+        shell: pwsh
+        run: .\scripts\setup.ps1
+
+      - name: Validate PowerShell, JSON, SVG, and JavaScript
+        shell: pwsh
+        run: |
+          $parseFailures = @()
+          Get-ChildItem .\scripts -Filter '*.ps1' | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
+            $parseFailures += $errors
+          }
+          if ($parseFailures.Count) {
+            $parseFailures | Format-List
+            throw 'PowerShell parsing failed.'
+          }
+
+          [xml](Get-Content -Raw .\assets\header.svg) | Out-Null
+          Get-Content -Raw .\package.json | ConvertFrom-Json | Out-Null
+          node --check .\button-lab\server.js
+          node -e "const fs=require('fs');const h=fs.readFileSync('button-lab/index.html','utf8');const s=h.match(/<script>([\s\S]*?)<\/script>/);new Function(s[1]);"
+
+      - name: Validate AutoHotkey scripts
+        shell: pwsh
+        run: |
+          $exe = (Resolve-Path '.\.runtime\AutoHotkey64.exe').Path
+          $scripts = @(
+            (Resolve-Path '.\.runtime\DiscoverNulea.ahk').Path,
+            (Resolve-Path '.\.runtime\NuleaMapper.ahk').Path
+          )
+
+          foreach ($script in $scripts) {
+            $process = Start-Process -FilePath $exe -ArgumentList @('/ErrorStdOut=UTF-8', '/Validate', ('"' + $script + '"')) -WindowStyle Hidden -Wait -PassThru
+            if ($process.ExitCode -ne 0) {
+              throw "AutoHotkey validation failed for $script with exit code $($process.ExitCode)."
+            }
+          }
