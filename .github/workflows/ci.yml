@@ -43,7 +43,7 @@ jobs:
 
           [xml](Get-Content -Raw .\assets\header.svg) | Out-Null
           Get-Content -Raw .\package.json | ConvertFrom-Json | Out-Null
-          node --check .\button-lab\server.js
+          npm run check
           node -e "const fs=require('fs');const h=fs.readFileSync('button-lab/index.html','utf8');const s=h.match(/<script>([\s\S]*?)<\/script>/);new Function(s[1]);"
 
       - name: Validate AutoHotkey scripts

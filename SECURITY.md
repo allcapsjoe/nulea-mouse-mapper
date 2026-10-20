@@ -8,7 +8,7 @@ Security fixes are applied to the latest commit on `main`.
 
 Do not disclose a security or input-lockout vulnerability in a pull request, commit comment, or public discussion.
 
-When the repository becomes public, use GitHub's **Report a vulnerability** feature on the Security tab. Until then, contact the repository owner privately through GitHub.
+Use GitHub's private **Report a vulnerability** feature on the repository's [Security tab](https://github.com/allcapsjoe/nulea-mouse-mapper/security/advisories/new).
 
 Include:
 
